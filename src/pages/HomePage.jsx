@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { InfoIcon, PackageIcon, MapPinLineIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 
 import Navbar from "../components/Navbar";
@@ -77,8 +78,46 @@ const HomePage = () => {
           <h3 className="hero-text-subtitle">
             Endüstriyel ürünlerde doğru seçimi, doğru hizmetle buluşturuyoruz.
           </h3>
+        </motion.div>
+      </div>
+      <div className="page-links">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.1 },
+          }}
+        >
+          <Link className="hero-cta-btn" to="/about">
+            Hakkımızda
+            <InfoIcon size={22} />
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.2 },
+          }}
+        >
           <Link className="hero-cta-btn" to="/services">
-            Neler Yapıyoruz?
+            Hizmetlerimiz
+            <PackageIcon size={22} />
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.3 },
+          }}
+        >
+          <Link className="hero-cta-btn" to="/contact">
+            İletişim
+            <MapPinLineIcon size={22} />
           </Link>
         </motion.div>
       </div>
