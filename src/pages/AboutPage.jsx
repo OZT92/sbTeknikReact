@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Navbar from "../components/Navbar";
 import sbLogo from "../img/sbLogo.png";
 
@@ -14,7 +15,11 @@ const AboutPage = () => {
         <video className="about-video" autoPlay loop muted>
           <source src="/sbAboutVideo1.mp4" type="video/mp4" />
         </video>
-        <div className="about-content">
+        <motion.div
+          initial={{ y: -100 }}
+          animate={{ y: 0, transition: { duration: 0.5 } }}
+          className="about-content"
+        >
           <img src={sbLogo} alt="Sb teknik logosu" className="about-logo" />
           <div className="about-text-content">
             <h1 className="about-header">SB Teknik;</h1>
@@ -27,14 +32,18 @@ const AboutPage = () => {
               tedarik prensipleri ile çalışmalarını sürdürmeye devam etmektedir.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="certificates-section">
+      <motion.div
+        initial={{ y: 100 }}
+        animate={{ y: 0, transition: { duration: 0.5 } }}
+        className="certificates-section"
+      >
         <img src={certificate1} alt="tse" />
         <img src={certificate2} alt="iso1002" />
         <img src={certificate3} alt="iso9001" />
         <img src={certificate4} alt="ce" />
-      </div>
+      </motion.div>
     </>
   );
 };

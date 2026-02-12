@@ -11,18 +11,18 @@ const Navbar = () => {
       <div className="navbar-links">
         <Link className="navbar-links_link" to="/about">
           {" "}
-          <InfoIcon size={22} />
-          Hakkımızda
+          <InfoIcon size={32} />
+          <a className="navbar-link-text"> Hakkımızda</a>
         </Link>
         <Link className="navbar-links_link" to="/services">
           {" "}
-          <PackageIcon size={22} />
-          Hizmetlerimiz
+          <PackageIcon size={32} />
+          <a className="navbar-link-text">Hizmetlerimiz</a>
         </Link>
         <Link className="navbar-links_link" to="/contact">
           {" "}
-          <MapPinLineIcon size={22} />
-          İletişim
+          <MapPinLineIcon size={32} />
+          <a className="navbar-link-text">İletişim</a>
         </Link>
       </div>
     </div>

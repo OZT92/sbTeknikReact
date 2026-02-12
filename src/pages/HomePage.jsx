@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { motion, spring } from "motion/react";
+import { motion } from "motion/react";
 
 import Navbar from "../components/Navbar";
 import heroVideo from "../video/sb-hero-video-1.mp4";
@@ -67,9 +67,8 @@ const HomePage = () => {
           <source src={heroVideo} type="video/mp4" />
         </video>
         <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ type: spring }}
+          initial={{ y: -200 }}
+          animate={{ y: 0, transition: { duration: 0.7 } }}
           className="hero-text"
         >
           <h1 className="hero-text-title">

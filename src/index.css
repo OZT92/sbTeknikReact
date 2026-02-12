@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: clamp(50%, 1.2vw + 48%, 62.5%);
+  font-size: 62.5%;
 }
 
 body {
@@ -15,13 +15,11 @@ body {
   background-image: url("../src/img/bg.png");
 }
 
-.app-container {
-  max-width: 100vw;
-  /* margin: 0 auto; */
+/* .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /*! NAVBAR */
 
@@ -34,13 +32,17 @@ body {
 }
 
 .navbar-logo {
-  height: 150px;
+  height: 7.2rem;
 }
 
 .navbar-links {
-  margin-right: 2rem;
+  margin-right: 3rem;
   display: flex;
-  gap: 30px;
+  gap: 4rem;
+}
+
+.navbar-link-text {
+  display: none;
 }
 
 .navbar-links_link {
@@ -51,7 +53,7 @@ body {
   transition: all 0.3s;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.6rem;
 }
 
 .navbar-links_link:hover {
@@ -61,7 +63,6 @@ body {
 /*! HERO-SECTION */
 
 .hero {
-  width: 1600px;
   position: relative;
   display: flex;
   align-items: center;
@@ -69,39 +70,41 @@ body {
 }
 
 .hero-video {
-  width: 1600px;
+  /* width: 160rem; */
+  width: 35rem;
   box-shadow: 0px 10px 35px 5px rgba(75, 75, 75, 0.75);
+  border: #194d88 2px solid;
+  border-radius: 10px;
+  margin-top: 5rem;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-
-  gap: 5rem;
-
+  gap: 1rem;
   position: absolute;
-  /* top: 250px; */
-  top: 25rem;
-  width: 90%;
+  top: 5rem;
+  left: 1rem;
 }
 
 .hero-text-title {
-  font-size: 9.6rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: #fefcfb;
 }
 
 .hero-text-subtitle {
-  font-size: 2.8rem;
+  font-size: 1.6rem;
   color: #fefcfb;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
 }
 
 .hero-cta-btn {
   background-color: #fefcfb;
-  width: 25rem;
+  width: 15rem;
   color: #194d88;
-  font-size: 2rem;
+  border: #194d88 1px solid;
+  font-size: 1.2rem;
   font-weight: 900;
   text-decoration: none;
   text-align: center;
@@ -113,10 +116,6 @@ body {
 .hero-cta-btn:hover {
   background-color: #194d88;
   color: #fefcfb;
-}
-
-.hero-img {
-  height: 60rem;
 }
 
 /* BRAND SLIDER */
