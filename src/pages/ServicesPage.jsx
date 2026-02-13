@@ -8,7 +8,7 @@ import serviceImg5 from "../img/services/yapiKimyasallari.png";
 import serviceImg6 from "../img/services/yapiMalzemeleri.png";
 
 import { motion } from "motion/react";
-import { MapPinLineIcon } from "@phosphor-icons/react";
+import { Envelope } from "@phosphor-icons/react";
 
 const ServicesPage = () => {
   return (
@@ -85,7 +85,7 @@ const ServicesPage = () => {
         >
           <Link className="services-cta-btn" to="/contact">
             İletişim
-            <MapPinLineIcon size={22} />
+            <Envelope size={22} color="#194d88" />
           </Link>
         </motion.div>
       </div>

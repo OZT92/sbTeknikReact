@@ -5,23 +5,24 @@ import sbLogo from "../img/sbLogo.png";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link className="nav-logo-container" to="/">
         <img className="navbar-logo" src={sbLogo} alt="SB Teknik logosu" />
+        <a className="nav-logo-text">SB Teknik Malzeme</a>
       </Link>
       <div className="navbar-links">
         <Link className="navbar-links_link" to="/about">
           {" "}
-          <InfoIcon size={32} />
+          <InfoIcon size={24} />
           <a className="navbar-link-text"> Hakkımızda</a>
         </Link>
         <Link className="navbar-links_link" to="/services">
           {" "}
-          <PackageIcon size={32} />
+          <PackageIcon size={24} />
           <a className="navbar-link-text">Hizmetlerimiz</a>
         </Link>
         <Link className="navbar-links_link" to="/contact">
           {" "}
-          <MapPinLineIcon size={32} />
+          <MapPinLineIcon size={24} />
           <a className="navbar-link-text">İletişim</a>
         </Link>
       </div>
