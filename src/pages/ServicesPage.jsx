@@ -85,7 +85,7 @@ const ServicesPage = () => {
         >
           <Link className="services-cta-btn" to="/contact">
             İletişim
-            <Envelope size={22} color="#194d88" />
+            <Envelope size={22} />
           </Link>
         </motion.div>
       </div>

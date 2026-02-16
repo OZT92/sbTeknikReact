@@ -1,6 +1,7 @@
 import { Envelope, NavigationArrow, Phone } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 import Navbar from "../components/Navbar";
+import sbLogo from "../img/sbLogo.png";
 
 const ContactPage = () => {
   return (
@@ -23,7 +24,24 @@ const ContactPage = () => {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </motion.div>
-        <div className="contact-container">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1, delay: 0.8 },
+          }}
+          className="contact-container"
+        >
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1, delay: 0.7 },
+            }}
+            src={sbLogo}
+            alt="Sb teknik logosu"
+            className="contact-logo"
+          />
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{
@@ -63,10 +81,10 @@ const ContactPage = () => {
           >
             <a href="tel:+902122566646">
               <Phone size={22} color="#194d88" />
-              0212 256 66 46
+              +90 (212) 256 66 46
             </a>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

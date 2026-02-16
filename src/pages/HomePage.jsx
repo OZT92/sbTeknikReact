@@ -121,7 +121,7 @@ const HomePage = () => {
           </Link>
         </motion.div>
       </div>
-      <BrandSlider logos={logos} speed={40} gap={56} height={200} />
+      <BrandSlider logos={logos} speed={40} gap={56} height={150} />
     </>
   );
 };
