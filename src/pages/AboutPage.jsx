@@ -36,7 +36,7 @@ const AboutPage = () => {
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
           preload="metadata"
-          poster="/public/poster-about.webp"
+          poster="/poster-about.webp"
           tabIndex={-1}
           aria-hidden="true"
         >

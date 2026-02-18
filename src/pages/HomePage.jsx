@@ -97,7 +97,7 @@ const HomePage = () => {
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
           preload="metadata"
-          poster="/public/poster-hero.webp"
+          poster="/poster-hero.webp"
           tabIndex={-1}
           aria-hidden="true"
         >
