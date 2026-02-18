@@ -2,7 +2,9 @@ import { Link } from "react-router";
 import { InfoIcon, PackageIcon, MapPinLineIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 
-import Navbar from "../components/Navbar";
+import SEO from "../components/SEO";
+import { SITE } from "../seo/site.js";
+
 import heroVideo from "../video/sb-hero-video-1.mp4";
 import BrandSlider from "../components/BrandSlider";
 
@@ -60,9 +62,29 @@ const HomePage = () => {
     { src: logo24, alt: "tomax" },
     { src: logo25, alt: "weber" },
   ];
+
+  const canonical = `${SITE.baseUrl}/`;
   return (
     <>
-      <Navbar />
+      <SEO
+        title="Endüstriyel Teknik Tedarik | SB Teknik"
+        description="SB Teknik; endüstriyel ürünler, hırdavat ve sanayi ekipmanlarında hızlı tedarik ve çözüm odaklı hizmet sunar."
+        canonical={canonical}
+        ogImage={SITE.ogImage}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: SITE.name,
+          url: SITE.baseUrl,
+          email: SITE.email,
+          telephone: SITE.phone,
+          address: {
+            "@type": "PostalAddress",
+            ...SITE.address,
+          },
+        }}
+      />
+
       <div className="hero">
         <video
           className="hero-video"

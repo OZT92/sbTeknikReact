@@ -1,12 +1,20 @@
+import SEO from "../components/SEO";
+import { SITE } from "../seo/site";
 import { Envelope, NavigationArrow, Phone } from "@phosphor-icons/react";
 import { motion } from "motion/react";
-import Navbar from "../components/Navbar";
+
 import sbLogo from "../img/sbLogo.png";
 
 const ContactPage = () => {
+  const canonical = `${SITE.baseUrl}/contact`;
   return (
     <>
-      <Navbar />
+      <SEO
+        title="İletişim | SB Teknik"
+        description="SB Teknik ile iletişime geçin. Teklif, ürün temini ve teknik tedarik ihtiyaçlarınız için hızlı dönüş sağlarız."
+        canonical={canonical}
+        ogImage={SITE.ogImage}
+      />
       <div className="contact-section">
         <motion.div
           initial={{ y: -200, opacity: 0 }}

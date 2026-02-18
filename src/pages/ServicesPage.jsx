@@ -1,5 +1,7 @@
+import SEO from "../components/SEO";
+import { SITE } from "../seo/site";
 import { Link } from "react-router";
-import Navbar from "../components/Navbar";
+
 import serviceImg1 from "../img/services/elektrikliElAletleri.png";
 import serviceImg2 from "../img/services/isGuvenligi.png";
 import serviceImg3 from "../img/services/nalburiye.png";
@@ -11,9 +13,33 @@ import { motion } from "motion/react";
 import { Envelope } from "@phosphor-icons/react";
 
 const ServicesPage = () => {
+  const canonical = `${SITE.baseUrl}/about`;
   return (
     <>
-      <Navbar />
+      <SEO
+        title="Hizmetlerimiz | SB Teknik"
+        description="Endüstriyel ürün tedariki, teknik ürün danışmanlığı ve hızlı temin süreçleriyle işletmenize uygun çözümler sunuyoruz."
+        canonical={canonical}
+        ogImage={SITE.ogImage}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Endüstriyel Teknik Tedarik Hizmetleri",
+          provider: {
+            "@type": "Organization",
+            name: SITE.name,
+            url: SITE.baseUrl,
+          },
+          areaServed: "TR",
+          serviceType: [
+            "Teknik Tedarik",
+            "Endüstriyel Ürün Temini",
+            "Ürün Danışmanlığı",
+          ],
+          url: canonical,
+        }}
+      />
+
       <div className="services-container">
         <motion.div
           initial={{ scale: 0.5 }}

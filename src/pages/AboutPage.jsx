@@ -1,5 +1,7 @@
+import SEO from "../components/SEO";
+import { SITE } from "../seo/site";
 import { motion } from "motion/react";
-import Navbar from "../components/Navbar";
+
 import sbLogo from "../img/sbLogo.png";
 
 import certificate1 from "../img/certificatesLogos/1.png";
@@ -9,10 +11,19 @@ import certificate4 from "../img/certificatesLogos/4.png";
 import { Link } from "react-router";
 import { PackageIcon } from "@phosphor-icons/react";
 
+import aboutVideo from "../video/sbAboutVideo1.mp4";
+
 const AboutPage = () => {
+  const canonical = `${SITE.baseUrl}/about`;
   return (
     <>
-      <Navbar />
+      <SEO
+        title="Hakkımızda | SB Teknik"
+        description="SB Teknik; sanayi ve endüstriyel tedarikte ürün seçimi, temin ve satış sonrası süreçlerde güvenilir çözüm ortağıdır."
+        canonical={canonical}
+        ogImage={SITE.ogImage}
+      />
+
       <div className="about-section">
         <video
           className="about-video"
@@ -28,7 +39,7 @@ const AboutPage = () => {
           tabIndex={-1}
           aria-hidden="true"
         >
-          <source src="/sbAboutVideo1.mp4" type="video/mp4" />
+          <source src={aboutVideo} type="video/mp4" />
         </video>
         <motion.div
           initial={{ y: -100 }}
