@@ -64,7 +64,20 @@ const HomePage = () => {
     <>
       <Navbar />
       <div className="hero">
-        <video className="hero-video" autoPlay loop muted>
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline="true"
+          controls={false}
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate noremoteplayback"
+          preload="auto"
+          tabIndex={-1}
+          aria-hidden="true"
+        >
           <source src={heroVideo} type="video/mp4" />
         </video>
         <motion.div
@@ -80,6 +93,7 @@ const HomePage = () => {
           </h3>
         </motion.div>
       </div>
+
       <div className="page-links">
         <motion.div
           initial={{ x: 200, opacity: 0 }}
