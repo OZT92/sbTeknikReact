@@ -33,8 +33,16 @@ import logo22 from "../img/brandLogos/22.webp";
 import logo23 from "../img/brandLogos/23.webp";
 import logo24 from "../img/brandLogos/24.webp";
 import logo25 from "../img/brandLogos/25.webp";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setReady(true), 800);
+    return () => clearTimeout(t);
+  }, []);
+
   const logos = [
     { src: logo1, alt: "oznurkablo" },
     { src: logo2, alt: "bosch" },
@@ -86,23 +94,25 @@ const HomePage = () => {
       />
 
       <div className="hero">
-        <video
-          className="hero-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          webkit-playsinline="true"
-          controls={false}
-          disablePictureInPicture
-          controlsList="nodownload noplaybackrate noremoteplayback"
-          preload="metadata"
-          poster="/poster-hero.webp"
-          tabIndex={-1}
-          aria-hidden="true"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        {ready && (
+          <video
+            className="hero-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+            controls={false}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            preload="metadata"
+            poster="/poster-hero.webp"
+            tabIndex={-1}
+            aria-hidden="true"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        )}
         <motion.div
           initial={{ y: -200 }}
           animate={{ y: 0, transition: { duration: 0.7 } }}
