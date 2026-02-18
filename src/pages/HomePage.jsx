@@ -5,34 +5,34 @@ import { motion } from "motion/react";
 import SEO from "../components/SEO";
 import { SITE } from "../seo/site.js";
 
-import heroVideo from "../video/sb-hero-video-1.mp4";
+import heroVideo from "../video/sb-hero-video-1-opt.mp4";
 import BrandSlider from "../components/BrandSlider";
 
-import logo1 from "../img/brandLogos/1.png";
-import logo2 from "../img/brandLogos/2.png";
-import logo3 from "../img/brandLogos/3.png";
-import logo4 from "../img/brandLogos/4.png";
-import logo5 from "../img/brandLogos/5.png";
-import logo6 from "../img/brandLogos/6.png";
-import logo7 from "../img/brandLogos/7.png";
-import logo8 from "../img/brandLogos/8.png";
-import logo9 from "../img/brandLogos/9.png";
-import logo10 from "../img/brandLogos/10.png";
-import logo11 from "../img/brandLogos/11.png";
-import logo12 from "../img/brandLogos/12.png";
-import logo13 from "../img/brandLogos/13.png";
-import logo14 from "../img/brandLogos/14.png";
-import logo15 from "../img/brandLogos/15.png";
-import logo16 from "../img/brandLogos/16.png";
-import logo17 from "../img/brandLogos/17.png";
-import logo18 from "../img/brandLogos/18.png";
-import logo19 from "../img/brandLogos/19.png";
-import logo20 from "../img/brandLogos/20.png";
-import logo21 from "../img/brandLogos/21.png";
-import logo22 from "../img/brandLogos/22.png";
-import logo23 from "../img/brandLogos/23.png";
-import logo24 from "../img/brandLogos/24.png";
-import logo25 from "../img/brandLogos/25.png";
+import logo1 from "../img/brandLogos/1.webp";
+import logo2 from "../img/brandLogos/2.webp";
+import logo3 from "../img/brandLogos/3.webp";
+import logo4 from "../img/brandLogos/4.webp";
+import logo5 from "../img/brandLogos/5.webp";
+import logo6 from "../img/brandLogos/6.webp";
+import logo7 from "../img/brandLogos/7.webp";
+import logo8 from "../img/brandLogos/8.webp";
+import logo9 from "../img/brandLogos/9.webp";
+import logo10 from "../img/brandLogos/10.webp";
+import logo11 from "../img/brandLogos/11.webp";
+import logo12 from "../img/brandLogos/12.webp";
+import logo13 from "../img/brandLogos/13.webp";
+import logo14 from "../img/brandLogos/14.webp";
+import logo15 from "../img/brandLogos/15.webp";
+import logo16 from "../img/brandLogos/16.webp";
+import logo17 from "../img/brandLogos/17.webp";
+import logo18 from "../img/brandLogos/18.webp";
+import logo19 from "../img/brandLogos/19.webp";
+import logo20 from "../img/brandLogos/20.webp";
+import logo21 from "../img/brandLogos/21.webp";
+import logo22 from "../img/brandLogos/22.webp";
+import logo23 from "../img/brandLogos/23.webp";
+import logo24 from "../img/brandLogos/24.webp";
+import logo25 from "../img/brandLogos/25.webp";
 
 const HomePage = () => {
   const logos = [
@@ -96,7 +96,8 @@ const HomePage = () => {
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
-          preload="auto"
+          preload="metadata"
+          poster="/public/poster-hero.webp"
           tabIndex={-1}
           aria-hidden="true"
         >

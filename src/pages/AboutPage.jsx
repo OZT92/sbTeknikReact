@@ -11,7 +11,7 @@ import certificate4 from "../img/certificatesLogos/4.png";
 import { Link } from "react-router";
 import { PackageIcon } from "@phosphor-icons/react";
 
-import aboutVideo from "../video/sbAboutVideo1.mp4";
+import aboutVideo from "../video/sbAboutVideo1-opt.mp4";
 
 const AboutPage = () => {
   const canonical = `${SITE.baseUrl}/about`;
@@ -35,7 +35,8 @@ const AboutPage = () => {
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
-          preload="auto"
+          preload="metadata"
+          poster="/public/poster-about.webp"
           tabIndex={-1}
           aria-hidden="true"
         >

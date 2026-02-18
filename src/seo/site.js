@@ -1,7 +1,7 @@
 export const SITE = {
   name: "SB Teknik",
   baseUrl: "https://sbteknikmalzeme.com",
-  ogImage: "", // varsa; yoksa boş bırakabilirsin
+  ogImage: "https://sbteknikmalzeme.com/og.jpg", // varsa; yoksa boş bırakabilirsin
   phone: "+902122566646",
   email: "sbteknik@hotmail.com",
   address: {

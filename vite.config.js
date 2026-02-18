@@ -1,13 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { sitemap } from "vite-plugin-sitemap";
+import Sitemap from "vite-plugin-sitemap";
 
 export default defineConfig({
   plugins: [
     react(),
-    sitemap({
+    Sitemap({
       hostname: "https://sbteknikmalzeme.com",
-      routes: ["/", "/about", "/services", "/contact"],
+      dynamicRoutes: ["/", "/about", "/services", "/contact"],
+      // generateRobotsTxt: true, // default zaten true :contentReference[oaicite:1]{index=1}
     }),
   ],
 });
