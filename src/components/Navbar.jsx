@@ -7,23 +7,23 @@ const Navbar = () => {
     <div className="navbar">
       <Link className="nav-logo-container" to="/">
         <img className="navbar-logo" src={sbLogo} alt="SB Teknik logosu" />
-        <a className="nav-logo-text">SB Teknik Malzeme</a>
+        <p className="nav-logo-text">SB Teknik Malzeme</p>
       </Link>
       <div className="navbar-links">
         <Link className="navbar-links_link" to="/about">
           {" "}
           <InfoIcon size={24} />
-          <a className="navbar-link-text"> Hakkımızda</a>
+          <p className="navbar-link-text"> Hakkımızda</p>
         </Link>
         <Link className="navbar-links_link" to="/services">
           {" "}
           <PackageIcon size={24} />
-          <a className="navbar-link-text">Hizmetlerimiz</a>
+          <p className="navbar-link-text">Hizmetlerimiz</p>
         </Link>
         <Link className="navbar-links_link" to="/contact">
           {" "}
           <MapPinLineIcon size={24} />
-          <a className="navbar-link-text">İletişim</a>
+          <p className="navbar-link-text">İletişim</p>
         </Link>
       </div>
     </div>
