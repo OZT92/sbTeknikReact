@@ -11,4 +11,9 @@ export default defineConfig({
       // generateRobotsTxt: true, // default zaten true :contentReference[oaicite:1]{index=1}
     }),
   ],
+  build: {
+    minify: "esbuild",
+    sourcemap: false,
+    cssMinify: true,
+  },
 });

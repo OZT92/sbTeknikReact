@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router";
 import { InfoIcon, PackageIcon, MapPinLineIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 import SEO from "../components/SEO";
 import { SITE } from "../seo/site.js";
@@ -8,38 +10,37 @@ import { SITE } from "../seo/site.js";
 import heroVideo from "../video/sb-hero-video-1-opt.mp4";
 import BrandSlider from "../components/BrandSlider";
 
-import logo1 from "../img/brandLogos/1.webp";
-import logo2 from "../img/brandLogos/2.webp";
-import logo3 from "../img/brandLogos/3.webp";
-import logo4 from "../img/brandLogos/4.webp";
-import logo5 from "../img/brandLogos/5.webp";
-import logo6 from "../img/brandLogos/6.webp";
-import logo7 from "../img/brandLogos/7.webp";
-import logo8 from "../img/brandLogos/8.webp";
-import logo9 from "../img/brandLogos/9.webp";
-import logo10 from "../img/brandLogos/10.webp";
-import logo11 from "../img/brandLogos/11.webp";
-import logo12 from "../img/brandLogos/12.webp";
-import logo13 from "../img/brandLogos/13.webp";
-import logo14 from "../img/brandLogos/14.webp";
-import logo15 from "../img/brandLogos/15.webp";
-import logo16 from "../img/brandLogos/16.webp";
-import logo17 from "../img/brandLogos/17.webp";
-import logo18 from "../img/brandLogos/18.webp";
-import logo19 from "../img/brandLogos/19.webp";
-import logo20 from "../img/brandLogos/20.webp";
-import logo21 from "../img/brandLogos/21.webp";
-import logo22 from "../img/brandLogos/22.webp";
-import logo23 from "../img/brandLogos/23.webp";
-import logo24 from "../img/brandLogos/24.webp";
-import logo25 from "../img/brandLogos/25.webp";
-import { useEffect, useState } from "react";
+import logo1 from "/1.webp";
+import logo2 from "/2.webp";
+import logo3 from "/3.webp";
+import logo4 from "/4.webp";
+import logo5 from "/5.webp";
+import logo6 from "/6.webp";
+import logo7 from "/7.webp";
+import logo8 from "/8.webp";
+import logo9 from "/9.webp";
+import logo10 from "/10.webp";
+import logo11 from "/11.webp";
+import logo12 from "/12.webp";
+import logo13 from "/13.webp";
+import logo14 from "/14.webp";
+import logo15 from "/15.webp";
+import logo16 from "/16.webp";
+import logo17 from "/17.webp";
+import logo18 from "/18.webp";
+import logo19 from "/19.webp";
+import logo20 from "/20.webp";
+import logo21 from "/21.webp";
+import logo22 from "/22.webp";
+import logo23 from "/23.webp";
+import logo24 from "/24.webp";
+import logo25 from "/25.webp";
 
 const HomePage = () => {
-  const [ready, setReady] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setReady(true), 800);
+    const t = setTimeout(() => setPlayVideo(true), 800);
     return () => clearTimeout(t);
   }, []);
 
@@ -94,20 +95,27 @@ const HomePage = () => {
       />
 
       <div className="hero">
-        {ready && (
+        {!playVideo ? (
+          <img
+            className="hero-poster"
+            src="/poster-hero.webp"
+            alt=""
+            aria-hidden="true"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
           <video
             className="hero-video"
             autoPlay
             loop
             muted
             playsInline
-            webkit-playsinline="true"
-            controls={false}
-            disablePictureInPicture
-            controlsList="nodownload noplaybackrate noremoteplayback"
             preload="metadata"
             poster="/poster-hero.webp"
-            tabIndex={-1}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate noremoteplayback"
             aria-hidden="true"
           >
             <source src={heroVideo} type="video/mp4" />

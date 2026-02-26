@@ -94,11 +94,20 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  /* aspect-ratio: 16/9; */
+  aspect-ratio: 16/9;
   height: 100%;
   object-fit: cover;
   filter: brightness(60%);
   pointer-events: none;
+}
+
+.hero-poster {
+  width: 100%;
+  height: 100%;
+  /* aspect-ratio: 16 / 9; */
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%);
 }
 
 .hero-text {
