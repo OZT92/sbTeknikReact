@@ -1,6 +1,9 @@
+/* =========================
+   BASE
+========================= */
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -11,18 +14,18 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
   font-family: "Inter", sans-serif;
   background-color: #fefcfb;
   overflow-x: hidden;
-  /* background-image: url("../src/img/bg.png"); */
 }
 
-/*! NAVBAR */
-
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   background-color: #fefcfb81;
   display: flex;
@@ -35,18 +38,19 @@ body {
   height: 6.2rem;
 }
 
+.nav-logo-container {
+  position: relative; /* FIX: ::after absolute için */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .nav-logo-container::after {
   content: "";
   width: 62px;
   height: 50px;
   border-right: #194d88 2px solid;
   position: absolute;
-}
-
-.nav-logo-container {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 }
 
 .nav-logo-text {
@@ -58,7 +62,6 @@ body {
 .navbar-links {
   margin-right: 3rem;
   display: flex;
-
   gap: 1rem;
 }
 
@@ -67,7 +70,7 @@ body {
   font-weight: 600;
   text-decoration: none;
   color: #194d88;
-  transition: all 0.3s;
+  transition: color 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,8 +81,9 @@ body {
   color: #2d080a;
 }
 
-/*! HERO-SECTION */
-
+/* =========================
+   HERO
+========================= */
 .hero {
   position: relative;
   display: flex;
@@ -94,7 +98,6 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  aspect-ratio: 16/9;
   height: 100%;
   object-fit: cover;
   filter: brightness(60%);
@@ -104,7 +107,6 @@ body {
 .hero-poster {
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 16 / 9; */
   object-fit: cover;
   display: block;
   filter: brightness(60%);
@@ -118,14 +120,14 @@ body {
 }
 
 .hero-text-title {
-  font-size: 4rem;
+  font-size: clamp(4rem, 6vw, 9rem);
   font-weight: 900;
   color: #fefcfb;
   padding: 0 2rem;
 }
 
 .hero-text-subtitle {
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 2.2vw, 2.8rem);
   font-weight: 400;
   color: #fefcfb;
   padding: 0 2rem;
@@ -163,8 +165,9 @@ body {
   box-shadow: 0px 1px 5px 0.5px rgba(75, 75, 75, 0.75);
 }
 
-/* BRAND SLIDER */
-
+/* =========================
+   BRAND SLIDER
+========================= */
 .logoSlider {
   overflow: hidden;
   width: 100%;
@@ -183,11 +186,8 @@ body {
     #000 90%,
     transparent
   );
-}
 
-/* Default (desktop) */
-
-.logoSlider {
+  /* Default (desktop) vars */
   --duration: 30s;
   --gap: 5.6rem;
   --logoH: 4.4rem;
@@ -216,7 +216,7 @@ body {
 .logoItem img {
   height: var(--logoH);
   width: auto;
-  max-width: 16rem; /* aşırı geniş logolar taşmasın */
+  max-width: 16rem;
   object-fit: contain;
   display: block;
 }
@@ -253,22 +253,9 @@ body {
   }
 }
 
-/* @media (prefers-reduced-motion: reduce) {
-  .logoTrack {
-    animation: none;
-  }
-} */
-
-/*! ABOUT-SECTION */
-
-/* .about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
-} */
-
+/* =========================
+   ABOUT
+========================= */
 .about-section {
   position: relative;
   overflow: hidden;
@@ -293,9 +280,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 2rem;
-  /* margin: 0 5rem; */
 }
 
 .about-text-content {
@@ -307,7 +292,7 @@ body {
 
 .about-header {
   display: block;
-  font-size: 2rem;
+  font-size: clamp(2rem, 2.2vw, 3.6rem);
   font-weight: 900;
   color: #fefcfb;
   margin-bottom: 0.5rem;
@@ -315,7 +300,7 @@ body {
 
 .about-text {
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.6vw, 2.2rem);
   font-weight: 500;
   color: #fefcfb;
 }
@@ -340,105 +325,20 @@ body {
   filter: grayscale(100);
 }
 
-/*! SERVICES-SECTION */
-/* .services-container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.card-container {
-  
-  display: flex;
-  justify-content: center;
-
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-
-.services-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0.5px 10px 0.5px #000;
-  width: 15rem;
-}
-
-.services-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #fefcfb;
-  position: absolute;
-  z-index: 2;
-  border: 2px solid #fefcfb;
-  padding: 0.5rem;
-}
-
-.services-card__img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: brightness(50%) blur(1px);
-  transition: 0.3s;
-}
-
-.services-card__img:hover {
-  filter: brightness(80%) blur(0px);
-}
-
-.services-cta-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.services-cta-section p {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #2d080a;
-  margin-bottom: 1rem;
-}
-
-.services-cta-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: #194d88;
-  width: 10rem;
-  color: #fefcfb;
-  border: #fefcfb 1px solid;
-  box-shadow: 0px 1px 10px 0.5px rgba(75, 75, 75, 0.75);
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-decoration: none;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 15px;
-  transition: all 0.3s;
-}
-
-.services-cta-btn:hover {
-  background-color: #fefcfb;
-  color: #194d88;
-  border: #194d88 1px solid;
-} */
-
-/*! SERVICES-SECTION */
+/* =========================
+   SERVICES (GRID 1/2/3 COL)
+========================= */
 .services-container {
   margin: 2rem 0;
   padding: 0 1rem;
 }
 
-/* Grid: breakpointlerin çoğunu gereksiz yapar */
 .card-container {
   display: grid;
-  grid-template-columns: 1fr; /* mobil = 1 kolon */
+  grid-template-columns: 1fr; /* 1 kolon */
   gap: 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* Card */
@@ -520,7 +420,6 @@ body {
   margin: 0 0 1rem;
 }
 
-/* Button componentin class'ı buysa */
 .services-cta-btn {
   display: inline-flex;
   align-items: center;
@@ -549,7 +448,15 @@ body {
   border-color: #194d88;
 }
 
-/*! CONTACT-SECTION */
+/* =========================
+   CONTACT
+========================= */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .map-container {
   display: flex;
@@ -561,13 +468,6 @@ body {
   width: 35rem;
   height: 30rem;
   margin-bottom: 10rem;
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .contact-container {
@@ -593,50 +493,44 @@ body {
 .contact-item a {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 1.6rem; /* FIX: 5rem çok kırılgandı */
   margin-left: 2rem;
-
   text-decoration: none;
   color: #194d88;
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-/* RESPONSIVE DESIGN */
+/* =========================
+   ACCESSIBILITY
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  .logoTrack {
+    animation: none;
+  }
+}
 
+/* =========================
+   RESPONSIVE (kept: only meaningful breakpoints)
+========================= */
+
+/* >= 390 */
 @media (min-width: 390px) {
   .hero {
-    height: 60vh;
     margin-bottom: 4rem;
   }
-
-  .hero-text-title {
-    font-size: 5rem;
-  }
-
-  .hero-text-subtitle {
-    font-size: 1.6rem;
-  }
-
   .hero-cta-btn {
     padding: 2rem;
   }
-
   .about-section {
     height: 83vh;
   }
-
   .map-container {
     margin-top: 10rem;
   }
 }
 
-@media (min-width: 430px) {
-  .hero {
-    height: 60vh;
-  }
-}
-
+/* >= 540 */
 @media (min-width: 540px) {
   .hero {
     height: 65vh;
@@ -645,14 +539,6 @@ body {
 
   .hero-text {
     gap: 3rem;
-  }
-
-  .hero-text-title {
-    font-size: 6rem;
-  }
-
-  .hero-text-subtitle {
-    font-size: 1.8rem;
   }
 
   .page-links {
@@ -670,7 +556,6 @@ body {
 
   .map-container {
     margin-top: 1rem;
-    /* margin-bottom: 1rem; */
   }
 
   .map {
@@ -679,6 +564,7 @@ body {
   }
 }
 
+/* >= 640 (tablet) */
 @media (min-width: 640px) {
   .navbar-logo {
     height: 7.2rem;
@@ -705,14 +591,6 @@ body {
     height: 60vh;
   }
 
-  .hero-text-title {
-    font-size: 9rem;
-  }
-
-  .hero-text-subtitle {
-    font-size: 2.4rem;
-  }
-
   .page-links {
     gap: 5rem;
     margin-bottom: 5rem;
@@ -722,14 +600,7 @@ body {
     height: 80vh;
   }
 
-  .about-header {
-    font-size: 3rem;
-  }
-
-  .about-text {
-    font-size: 2rem;
-  }
-
+  /* Services: 2 columns */
   .services-container {
     padding: 0 1.5rem;
   }
@@ -755,25 +626,13 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .hero {
-    height: 75vh;
-  }
-}
-
-@media (min-width: 820px) {
-  .hero {
-    height: 80vh;
-  }
-}
-
+/* >= 1024 (desktop) */
 @media (min-width: 1024px) {
   .navbar-logo {
     height: 8rem;
   }
 
   .nav-logo-container::after {
-    content: "";
     width: 80px;
     height: 60px;
   }
@@ -784,14 +643,6 @@ body {
 
   .navbar-links_link {
     font-size: 2rem;
-  }
-
-  .hero-text-title {
-    font-size: 9rem;
-  }
-
-  .hero-text-subtitle {
-    font-size: 2.8rem;
   }
 
   .page-links {
@@ -809,14 +660,6 @@ body {
     width: 40rem;
   }
 
-  .about-header {
-    font-size: 3.6rem;
-  }
-
-  .about-text {
-    font-size: 2.2rem;
-  }
-
   .certificates-section {
     gap: 5rem;
   }
@@ -825,6 +668,7 @@ body {
     width: 6.2rem;
   }
 
+  /* Services: 3 columns + typography */
   .services-container {
     padding: 0 2rem;
   }
@@ -856,18 +700,11 @@ body {
   }
 }
 
+/* >= 1150 (hero + contact layout switch) */
 @media (min-width: 1150px) {
   .hero {
     height: 100vh;
     margin-bottom: 0;
-  }
-
-  .hero-text-title {
-    font-size: 7rem;
-  }
-
-  .hero-text-subtitle {
-    font-size: 2.4rem;
   }
 
   .page-links {
@@ -926,6 +763,7 @@ body {
   }
 }
 
+/* >= 1280 (contact map size) */
 @media (min-width: 1280px) {
   .map {
     width: 60rem;
@@ -933,6 +771,7 @@ body {
   }
 }
 
+/* >= 1400 (wide) */
 @media (min-width: 1400px) {
   .about-section {
     height: 75vh;
@@ -944,8 +783,6 @@ body {
 
   .card-container {
     max-width: 1440px;
-  }
-  .card-container {
     gap: 1.5rem;
   }
 
@@ -955,9 +792,9 @@ body {
   }
 }
 
+/* >= 1600 (very wide tweaks) */
 @media (min-width: 1600px) {
   .about-text-content {
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -980,19 +817,16 @@ body {
   }
 }
 
+/* >= 1920 */
 @media (min-width: 1920px) {
-  .about-video {
-    margin-bottom: 1.5rem;
-  }
-
   .card-container {
     max-width: 1500px;
   }
 }
 
+/* >= 2560 */
 @media (min-width: 2560px) {
   .hero-text-title {
-    font-size: 9.2rem;
     max-width: 160rem;
   }
 
