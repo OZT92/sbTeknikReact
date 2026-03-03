@@ -7,6 +7,7 @@ import {
 } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 import sbLogo from "../img/sbLogo.png";
+
 const canonical = `${SITE.baseUrl}/contact`;
 
 const fadeIn = {
@@ -75,17 +76,6 @@ const ContactPage = () => {
           />
 
           <motion.div variants={item} className="contact-item">
-            <a
-              href="https://www.google.com/maps?query=SB%20Teknik%20Malzeme%20End%C3%BCstriyel%20%C3%9Cr%C3%BCnler"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <NavigationArrowIcon size={22} className="contact-icon" />
-              Emekyemez Mah. Buğulu Sk. 14/A Beyoğlu/İstanbul
-            </a>
-          </motion.div>
-
-          <motion.div variants={item} className="contact-item">
             <a href="mailto:sbteknik@hotmail.com">
               <EnvelopeIcon size={22} className="contact-icon" />
               sbteknik@hotmail.com
@@ -96,6 +86,16 @@ const ContactPage = () => {
             <a href="tel:+902122566646">
               <PhoneIcon size={22} className="contact-icon" />
               +90 (212) 256 66 46
+            </a>
+          </motion.div>
+          <motion.div variants={item} className="contact-item">
+            <a
+              href="https://www.google.com/maps?query=SB%20Teknik%20Malzeme%20End%C3%BCstriyel%20%C3%9Cr%C3%BCnler"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <NavigationArrowIcon size={22} className="contact-icon" />
+              Emekyemez Mah. Buğulu Sk. 14/A Beyoğlu/İstanbul
             </a>
           </motion.div>
         </motion.div>
