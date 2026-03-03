@@ -5,6 +5,11 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="social-links">
+        <a
+          href="https://www.instagram.com/sbteknikmalzeme/"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
         <InstagramLogoIcon className="contact-item" size={20} />
       </div>
 
