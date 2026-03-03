@@ -27,11 +27,18 @@ body {
    NAVBAR
 ========================= */
 .navbar {
-  background-color: #fefcfb81;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .navbar-logo {
@@ -84,6 +91,7 @@ body {
 /* =========================
    HERO
 ========================= */
+
 .hero {
   position: relative;
   display: flex;
@@ -505,15 +513,23 @@ body {
    FOOTER
 ========================= */
 .footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #dfdfdf;
+  /* position: fixed;
+  bottom: 0; */
+
   width: 100vw;
+  margin-top: 5rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .social-links {
@@ -546,6 +562,10 @@ body {
   }
   .map-container {
     margin-top: 10rem;
+  }
+
+  .contact-main-container {
+    margin-bottom: 22rem;
   }
 }
 
@@ -642,6 +662,10 @@ body {
 
   .contact-item a {
     font-size: 1.8rem;
+  }
+
+  .contact-main-container {
+    margin-bottom: 29rem;
   }
 }
 
@@ -834,6 +858,10 @@ body {
   .contact-container {
     padding-top: 25rem;
   }
+
+  .contact-main-container {
+    margin-bottom: 52rem;
+  }
 }
 
 /* >= 1920 */
@@ -860,6 +888,14 @@ body {
     width: 50rem;
   }
 
+  .about-main-container {
+    margin-bottom: 8rem;
+  }
+
+  .services-main-container {
+    margin-bottom: 20rem;
+  }
+
   .map {
     width: 100rem;
     height: 100rem;
@@ -867,5 +903,9 @@ body {
 
   .contact-container {
     padding-top: 40rem;
+  }
+
+  .contact-main-container {
+    margin-bottom: 75rem;
   }
 }

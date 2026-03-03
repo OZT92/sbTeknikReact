@@ -12,6 +12,7 @@ import serviceImg6 from "../img/services/yapiMalzemeleri.png";
 import { EnvelopeIcon } from "@phosphor-icons/react";
 import Card from "../components/Card";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 const canonical = `${SITE.baseUrl}/services`;
 
@@ -57,53 +58,61 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <SEO
-        title="Hizmetlerimiz | SB Teknik"
-        description="Endüstriyel ürün tedariki, teknik ürün danışmanlığı ve hızlı temin süreçleriyle işletmenize uygun çözümler sunuyoruz."
-        canonical={canonical}
-        ogImage={SITE.ogImage}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: "Endüstriyel Teknik Tedarik Hizmetleri",
-          provider: {
-            "@type": "Organization",
-            name: SITE.name,
-            url: SITE.baseUrl,
-          },
-          areaServed: "TR",
-          serviceType: [
-            "Teknik Tedarik",
-            "Endüstriyel Ürün Temini",
-            "Ürün Danışmanlığı",
-          ],
-          url: canonical,
-        }}
-      />
+      <div className="services-main-container">
+        <SEO
+          title="Hizmetlerimiz | SB Teknik"
+          description="Endüstriyel ürün tedariki, teknik ürün danışmanlığı ve hızlı temin süreçleriyle işletmenize uygun çözümler sunuyoruz."
+          canonical={canonical}
+          ogImage={SITE.ogImage}
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Endüstriyel Teknik Tedarik Hizmetleri",
+            provider: {
+              "@type": "Organization",
+              name: SITE.name,
+              url: SITE.baseUrl,
+            },
+            areaServed: "TR",
+            serviceType: [
+              "Teknik Tedarik",
+              "Endüstriyel Ürün Temini",
+              "Ürün Danışmanlığı",
+            ],
+            url: canonical,
+          }}
+        />
 
-      <div className="services-container">
-        <div className="card-container">
-          {services.map((s) => (
-            <Card
-              key={s.id}
-              title={s.title}
-              desc={s.desc}
-              imgSrc={s.imgSrc}
-              to="/contact"
-            />
-          ))}
+        <div className="services-container">
+          <div className="card-container">
+            {services.map((s) => (
+              <Card
+                key={s.id}
+                title={s.title}
+                desc={s.desc}
+                imgSrc={s.imgSrc}
+                to="/contact"
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="services-cta-section">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
+          >
+            Fiyat teklifi ve daha fazla bilgi almak için bize ulaşın.
+          </motion.p>
+          <Button
+            to="/contact"
+            text="İletişim"
+            Icon={EnvelopeIcon}
+            delay={0.2}
+          />
         </div>
       </div>
-
-      <div className="services-cta-section">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.2 } }}
-        >
-          Fiyat teklifi ve daha fazla bilgi almak için bize ulaşın.
-        </motion.p>
-        <Button to="/contact" text="İletişim" Icon={EnvelopeIcon} delay={0.2} />
-      </div>
+      <Footer />
     </>
   );
 }
