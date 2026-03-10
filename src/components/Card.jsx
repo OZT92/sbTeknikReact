@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import "./Card.css";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },

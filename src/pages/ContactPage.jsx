@@ -1,13 +1,15 @@
-import SEO from "../components/SEO";
-import { SITE } from "../seo/site.js";
 import {
   EnvelopeIcon,
   NavigationArrowIcon,
   PhoneIcon,
 } from "@phosphor-icons/react";
 import { motion } from "motion/react";
+import "./ContactPage.css";
+
+import JsonLd from "../components/JsonLd.jsx";
+import usePageSeo from "../hooks/usePageSeo";
+import { SITE } from "../seo/site";
 import sbLogo from "../img/sbLogo.png";
-import Footer from "../components/Footer.jsx";
 
 const canonical = `${SITE.baseUrl}/contact`;
 
@@ -26,25 +28,42 @@ const item = {
   show: { y: 0, opacity: 1, transition: { duration: 0.5 } },
 };
 
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "İletişim",
+  url: canonical,
+  mainEntity: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.baseUrl,
+    logo: SITE.logo,
+    email: "sbteknik@hotmail.com",
+    telephone: "+902122566646",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Emekyemez Mah. Buğulu Sk. 14/A",
+      addressLocality: "Beyoğlu",
+      addressRegion: "İstanbul",
+      addressCountry: "TR",
+    },
+  },
+};
+
 const ContactPage = () => {
+  usePageSeo({
+    title: "İletişim | SB Teknik",
+    description:
+      "SB Teknik iletişim bilgileri, telefon, e-posta, adres ve harita konumu.",
+    canonical,
+    image: SITE.ogImage,
+  });
+
   return (
     <>
+      <JsonLd data={contactSchema} />
+
       <div className="contact-main-container">
-        <SEO
-          title="İletişim | SB Teknik"
-          description="SB Teknik ile iletişime geçin. Teklif, ürün temini ve teknik tedarik ihtiyaçlarınız için hızlı dönüş sağlarız."
-          canonical={canonical}
-          ogImage={SITE.ogImage}
-          jsonLd={{
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: SITE.name,
-            url: SITE.baseUrl,
-            telephone: SITE.phone,
-            email: SITE.email,
-            address: { "@type": "PostalAddress", ...SITE.address },
-          }}
-        />
         <div className="contact-section">
           <motion.div
             variants={fadeIn}
@@ -78,34 +97,42 @@ const ContactPage = () => {
             />
 
             <motion.div variants={item} className="contact-item">
-              <a href="mailto:sbteknik@hotmail.com">
+              <a
+                href="mailto:sbteknik@hotmail.com"
+                aria-label="SB Teknik e-posta adresi"
+              >
                 <EnvelopeIcon size={22} className="contact-icon" />
-                sbteknik@hotmail.com
+                <span>sbteknik@hotmail.com</span>
               </a>
             </motion.div>
 
             <motion.div variants={item} className="contact-item">
-              <a href="tel:+902122566646">
+              <a
+                href="tel:+902122566646"
+                aria-label="SB Teknik telefon numarası"
+              >
                 <PhoneIcon size={22} className="contact-icon" />
-                +90 (212) 256 66 46
+                <span>+90 (212) 256 66 46</span>
               </a>
             </motion.div>
+
             <motion.div variants={item} className="contact-item">
               <a
                 href="https://www.google.com/maps?query=SB%20Teknik%20Malzeme%20End%C3%BCstriyel%20%C3%9Cr%C3%BCnler"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="SB Teknik adresini Google Maps üzerinde aç"
               >
                 <NavigationArrowIcon size={22} className="contact-icon" />
-                Emekyemez Mah. Buğulu Sk. 14/A Beyoğlu/İstanbul
+                <span>Emekyemez Mah. Buğulu Sk. 14/A Beyoğlu/İstanbul</span>
               </a>
             </motion.div>
           </motion.div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </div>    </>
   );
 };
 
 export default ContactPage;
+
+

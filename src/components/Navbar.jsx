@@ -1,6 +1,7 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { InfoIcon, PackageIcon, MapPinLineIcon } from "@phosphor-icons/react";
 import sbLogo from "../img/sbLogo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -10,17 +11,17 @@ const Navbar = () => {
         <p className="nav-logo-text">SB Teknik Malzeme</p>
       </Link>
       <div className="navbar-links">
-        <Link className="navbar-links_link" to="/about">
+        <Link className="navbar-link" to="/about">
           {" "}
           <InfoIcon size={24} />
           <p className="navbar-link-text"> Hakkımızda</p>
         </Link>
-        <Link className="navbar-links_link" to="/services">
+        <Link className="navbar-link" to="/services">
           {" "}
           <PackageIcon size={24} />
           <p className="navbar-link-text">Hizmetlerimiz</p>
         </Link>
-        <Link className="navbar-links_link" to="/contact">
+        <Link className="navbar-link" to="/contact">
           {" "}
           <MapPinLineIcon size={24} />
           <p className="navbar-link-text">İletişim</p>

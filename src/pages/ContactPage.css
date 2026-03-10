@@ -1,0 +1,176 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.map {
+  width: min(100%, 35rem);
+  max-width: 100%;
+  height: 30rem;
+  margin-bottom: 10rem;
+  border: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: min(100%, 30rem);
+  padding: 0 1rem;
+}
+
+.contact-logo {
+  display: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: min(100%, 35rem);
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 100%;
+  margin-left: 0;
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #194d88;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media (min-width: 390px) {
+  .map-container {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .map-container {
+    margin-top: 1rem;
+  }
+
+  .map {
+    width: min(100%, 40rem);
+    height: 35rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .map-container {
+    margin-top: 3rem;
+  }
+
+  .map {
+    width: min(100%, 60rem);
+    height: 55rem;
+  }
+
+  .contact-item {
+    width: min(100%, 60rem);
+  }
+
+  .contact-item a {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .map-container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .map {
+    width: min(100%, 80rem);
+    height: 80rem;
+  }
+
+  .contact-item a {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .contact-section {
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 3rem;
+    width: min(100%, 120rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .map-container {
+    margin-top: 0;
+    height: 50rem;
+  }
+
+  .map {
+    width: min(100%, 50rem);
+    height: 50rem;
+  }
+
+  .contact-container {
+    width: min(100%, 50rem);
+    gap: 2rem;
+  }
+
+  .contact-logo {
+    display: block;
+    width: 30rem;
+  }
+
+  .contact-item {
+    width: min(100%, 50rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .map {
+    width: min(100%, 60rem);
+    height: 60rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .map {
+    width: min(100%, 75rem);
+    height: 75rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact-section {
+    margin-top: 2rem;
+  }
+
+  .map {
+    width: min(100%, 85rem);
+    height: 85rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .map {
+    width: min(100%, 100rem);
+    height: 100rem;
+  }
+}

@@ -1,9 +1,12 @@
-import SEO from "../components/SEO";
 import { SITE } from "../seo/site";
 import { motion, useReducedMotion } from "motion/react";
 import { PackageIcon } from "@phosphor-icons/react";
+import "./AboutPage.css";
 
+import usePageSeo from "../hooks/usePageSeo";
+import JsonLd from "../components/JsonLd";
 import Button from "../components/Button";
+
 import sbLogo from "../img/sbLogo.png";
 import aboutVideo from "../video/sbAboutVideo1-opt.mp4";
 
@@ -11,7 +14,6 @@ import certificate1 from "../img/certificatesLogos/1.png";
 import certificate2 from "../img/certificatesLogos/2.png";
 import certificate3 from "../img/certificatesLogos/3.png";
 import certificate4 from "../img/certificatesLogos/4.png";
-import Footer from "../components/Footer";
 
 const canonical = `${SITE.baseUrl}/about`;
 
@@ -36,28 +38,41 @@ const certsAnim = {
   show: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.1 } },
 };
 
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "Hakkımızda",
+  url: canonical,
+  mainEntity: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.baseUrl,
+    logo: SITE.logo,
+    email: SITE.email,
+    telephone: SITE.phone,
+    address: {
+      "@type": "PostalAddress",
+      ...SITE.address,
+    },
+  },
+};
+
 export default function AboutPage() {
   const reduceMotion = useReducedMotion();
 
+  usePageSeo({
+    title: "Hakkımızda | SB Teknik",
+    description:
+      "SB Teknik; sanayi ve endüstriyel tedarikte ürün seçimi, temin ve satış sonrası süreçlerde güvenilir çözüm ortağıdır.",
+    canonical,
+    image: SITE.ogImage,
+  });
+
   return (
     <>
-      <div className="about-main-container">
-        <SEO
-          title="Hakkımızda | SB Teknik"
-          description="SB Teknik; sanayi ve endüstriyel tedarikte ürün seçimi, temin ve satış sonrası süreçlerde güvenilir çözüm ortağıdır."
-          canonical={canonical}
-          ogImage={SITE.ogImage}
-          jsonLd={{
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: SITE.name,
-            url: SITE.baseUrl,
-            email: SITE.email,
-            telephone: SITE.phone,
-            address: { "@type": "PostalAddress", ...SITE.address },
-          }}
-        />
+      <JsonLd data={aboutSchema} />
 
+      <div className="about-main-container">
         <div className="about-section">
           {!reduceMotion && (
             <video
@@ -104,6 +119,7 @@ export default function AboutPage() {
               text="Hizmetler"
               Icon={PackageIcon}
               delay={0.1}
+              size="lg"
             />
           </motion.div>
         </div>
@@ -125,8 +141,8 @@ export default function AboutPage() {
             />
           ))}
         </motion.div>
-      </div>
-      <Footer />
-    </>
+      </div>    </>
   );
 }
+
+

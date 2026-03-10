@@ -1,4 +1,5 @@
 import { InstagramLogoIcon } from "@phosphor-icons/react";
+import "./Footer.css";
 
 const Footer = () => {
   const tarih = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         ></a>
-        <InstagramLogoIcon className="contact-item" size={20} />
+        <InstagramLogoIcon className="footer-social-icon" size={20} />
       </div>
 
       <div className="copyright">&#169;{tarih} - SB Teknik Malzeme </div>
