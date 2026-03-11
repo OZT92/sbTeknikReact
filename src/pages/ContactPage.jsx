@@ -62,7 +62,6 @@ const ContactPage = () => {
   return (
     <>
       <JsonLd data={contactSchema} />
-
       <div className="contact-main-container">
         <div className="contact-section">
           <motion.div
@@ -118,7 +117,7 @@ const ContactPage = () => {
 
             <motion.div variants={item} className="contact-item">
               <a
-                href="https://www.google.com/maps?query=SB%20Teknik%20Malzeme%20End%C3%BCstriyel%20%C3%9Cr%C3%BCnler"
+                href="https://www.google.com/maps/place/Sb+Teknik+Malzeme+End%C3%BCstriyel+%C3%9Cr%C3%BCnler/@41.0252926,28.9676216,1144m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cab9e5e227e5ed:0xf3cc07f525fc71d7!8m2!3d41.0252886!4d28.9701965!16s%2Fg%2F11dxnrvtms?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="SB Teknik adresini Google Maps üzerinde aç"
@@ -129,10 +128,9 @@ const ContactPage = () => {
             </motion.div>
           </motion.div>
         </div>
-      </div>    </>
+      </div>{" "}
+    </>
   );
 };
 
 export default ContactPage;
-
-

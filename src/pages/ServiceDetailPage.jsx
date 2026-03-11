@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { EnvelopeIcon, ArrowRightIcon } from "@phosphor-icons/react";
 import "./ServiceDetailPage.css";
@@ -14,6 +15,10 @@ import Button from "../components/Button";
 export default function ServiceDetailPage() {
   const { slug } = useParams();
   const service = services.find((item) => item.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   const canonical = service
     ? `${SITE.baseUrl}/services/${service.slug}`
