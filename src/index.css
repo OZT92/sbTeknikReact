@@ -1,10 +1,89 @@
+:root {
+  /* 1rem = 10px (html font-size: 62.5%) */
+
+  /* ── Colors ── */
+  --color-bg:             #0f1923;
+  --color-surface:        #1a2840;
+  --color-surface-raised: #253347;
+  --color-accent:         #c8960c;
+  --color-accent-hover:   #e8b010;
+  --color-text-primary:   #f0ebe4;
+  --color-text-muted:     #7a8fa8;
+  --color-border:         #253347;
+  --color-border-subtle:  #1e2e42;
+  --color-destructive:    #c0392b;
+  --color-white:          #ffffff;
+  --color-overlay:        rgba(15, 25, 35, 0.72);
+
+  /* ── Font Families ── */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* ── Type Scale ── */
+  --text-body:        1.6rem;
+  --text-label:       1.4rem;
+  --text-heading:     2.4rem;
+  --text-display-lg:  clamp(4rem, 6vw, 9rem);
+
+  /* ── Spacing (8pt grid) ── */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.6rem;
+  --space-lg:  2.4rem;
+  --space-xl:  3.2rem;
+  --space-2xl: 4.8rem;
+  --space-3xl: 6.4rem;
+  --space-4xl: 12.8rem;
+
+  /* ── Z-Index ── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-float:   200;
+  --z-navbar:  300;
+
+  /* ── Motion ── */
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms;
+}
+
 /* =========================
    BASE
 ========================= */
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("/fonts/BarlowCondensed/BarlowCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD,
+                 U+011E-011F, U+0130-0131, U+015E-015F, U+00C7, U+00E7,
+                 U+00D6, U+00F6, U+00DC, U+00FC;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("/fonts/BarlowCondensed/BarlowCondensed-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD,
+                 U+011E-011F, U+0130-0131, U+015E-015F, U+00C7, U+00E7,
+                 U+00D6, U+00F6, U+00DC, U+00FC;
 }
 
 * {
@@ -18,8 +97,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #fefcfb;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
   overflow-x: hidden;
 }
 
