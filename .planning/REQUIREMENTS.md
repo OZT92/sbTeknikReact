@@ -86,43 +86,41 @@
 
 ## Traceability
 
-*(Populated during roadmap creation)*
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUN-01 | — | Pending |
-| FOUN-02 | — | Pending |
-| FOUN-03 | — | Pending |
-| FOUN-04 | — | Pending |
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| HOME-01 | — | Pending |
-| HOME-02 | — | Pending |
-| HOME-03 | — | Pending |
-| HOME-04 | — | Pending |
-| HOME-05 | — | Pending |
-| SERV-01 | — | Pending |
-| SERV-02 | — | Pending |
-| SERV-03 | — | Pending |
-| SERV-04 | — | Pending |
-| ABOUT-01 | — | Pending |
-| ABOUT-02 | — | Pending |
-| ABOUT-03 | — | Pending |
-| ABOUT-04 | — | Pending |
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| SEO-01 | — | Pending |
-| SEO-02 | — | Pending |
-| SEO-03 | — | Pending |
-| SEO-04 | — | Pending |
+| FOUN-01 | Phase 1 — Foundation | Pending |
+| FOUN-02 | Phase 1 — Foundation | Pending |
+| FOUN-03 | Phase 1 — Foundation | Pending |
+| FOUN-04 | Phase 1 — Foundation | Pending |
+| NAV-01 | Phase 2 — Navbar | Pending |
+| NAV-02 | Phase 2 — Navbar | Pending |
+| NAV-03 | Phase 2 — Navbar | Pending |
+| HOME-01 | Phase 3 — HomePage | Pending |
+| HOME-02 | Phase 3 — HomePage | Pending |
+| HOME-03 | Phase 3 — HomePage | Pending |
+| HOME-04 | Phase 3 — HomePage | Pending |
+| HOME-05 | Phase 3 — HomePage | Pending |
+| SEO-04 | Phase 3 — HomePage | Pending |
+| SERV-01 | Phase 4 — ServicesPage | Pending |
+| SERV-02 | Phase 4 — ServicesPage | Pending |
+| SERV-03 | Phase 4 — ServicesPage | Pending |
+| SERV-04 | Phase 4 — ServicesPage | Pending |
+| ABOUT-01 | Phase 5 — About + Contact + SEO | Pending |
+| ABOUT-02 | Phase 5 — About + Contact + SEO | Pending |
+| ABOUT-03 | Phase 5 — About + Contact + SEO | Pending |
+| ABOUT-04 | Phase 5 — About + Contact + SEO | Pending |
+| CONT-01 | Phase 5 — About + Contact + SEO | Pending |
+| CONT-02 | Phase 5 — About + Contact + SEO | Pending |
+| CONT-03 | Phase 5 — About + Contact + SEO | Pending |
+| SEO-01 | Phase 5 — About + Contact + SEO | Pending |
+| SEO-02 | Phase 5 — About + Contact + SEO | Pending |
+| SEO-03 | Phase 5 — About + Contact + SEO | Pending |
 
 **Coverage:**
 - v1 requirements: 27 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 27 ⚠️
+- Mapped to phases: 27
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-05-23*
-*Last updated: 2026-05-23 after initial definition*
+*Last updated: 2026-05-23 after roadmap creation*
