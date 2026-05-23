@@ -567,17 +567,19 @@ The UI-SPEC contains a hard requirement: "Amber accent (`#c8960c`) must be valid
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Logo color validation**
    - What we know: UI-SPEC requires manual validation of `#c8960c` against `public/sbLogo.png` before Phase 1 sign-off.
    - What's unclear: Whether the logo uses warm amber tones or a different palette that would conflict.
    - Recommendation: Make this the first task in the plan — visually inspect the logo, confirm or update `--color-accent`. It gates all downstream phases.
+   - **RESOLVED:** Addressed via Plan 01-01 Task 3 (human checkpoint gate — executor must visually confirm logo color match before Phase 2 begins).
 
 2. **Whether to uninstall `sharp` and `ttf2woff2` after conversion**
    - What we know: These packages are installed as `--save-dev` for conversion scripts only. Once WOFF2 and WebP files are committed, they're no longer needed.
    - What's unclear: Whether the project wants to keep them (e.g., for future image additions) or remove them to keep devDependencies minimal.
    - Recommendation: Remove them from package.json and lock file after conversions are committed. Include an explicit cleanup task in the plan.
+   - **RESOLVED:** Both plans explicitly `npm uninstall` the conversion packages as the final step; acceptance criteria verify removal from package.json.
 
 ---
 
