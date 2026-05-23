@@ -29,7 +29,10 @@
   2. Barlow Condensed 700/900 and Inter WOFF2 load without a 854 KB TTF request visible in DevTools Network tab
   3. All 6 service card image paths resolve to WebP files (no PNG 404s, no fallback to uncompressed sources)
   4. `:root` token block is present at the top of `src/index.css` with color, spacing, and typography custom properties defined
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Dark-ground + fonts slice: :root token block, Inter WOFF2, Barlow Condensed 700/900, body tokens, preload hints
+- [ ] 01-02-PLAN.md — WebP images slice: convert 6 service PNGs to WebP, swap ServicesPage imports to public path strings
 **UI hint**: yes
 
 ### Phase 2: Navbar
@@ -91,7 +94,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/2 | Planned | - |
 | 2. Navbar | 0/? | Not started | - |
 | 3. HomePage | 0/? | Not started | - |
 | 4. ServicesPage | 0/? | Not started | - |
