@@ -2,8 +2,8 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-05-23T17:41:20.122Z"
+status: checkpoint
+last_updated: "2026-05-23T17:53:00Z"
 progress:
   total_phases: 5
   completed_phases: 0
@@ -24,23 +24,25 @@ progress:
 
 **Stack:** React 19, Vite 7, React Router v7, Motion (Framer), Phosphor Icons — no CSS framework
 
-**Current Focus:** Phase 1 — Foundation (CSS token layer, fonts, images)
+**Current Focus:** Phase 01 — foundation
 
 ---
 
 ## Current Position
 
+Phase: 01 (foundation) — CHECKPOINT
+Plan: 1 of 2
 | Field | Value |
 |-------|-------|
 | Milestone | Visual Redesign (MVP) |
 | Phase | 1 — Foundation |
-| Plan | Not started |
-| Status | Roadmap created, ready for Phase 1 planning |
+| Plan | 01-01 — 2/3 tasks complete, awaiting Task 3 human-verify checkpoint |
+| Status | Tasks 1+2 committed; dark ground + fonts pipeline done; logo accent validation pending |
 
 **Progress:**
 
 ```
-[          ] Phase 1: Foundation        — Not started
+[>         ] Phase 1: Foundation        — In progress (plan 1/2, checkpoint)
 [          ] Phase 2: Navbar            — Not started
 [          ] Phase 3: HomePage          — Not started
 [          ] Phase 4: ServicesPage      — Not started
@@ -55,7 +57,7 @@ Overall: 0/5 phases complete
 
 | Metric | Baseline | Target | Current |
 |--------|----------|--------|---------|
-| Inter font size | 854 KB (TTF) | ~200 KB (WOFF2) | — |
+| Inter font size | 854 KB (TTF) | ~200 KB (WOFF2) | 356 KB WOFF2 (plan 01-01) |
 | Service image size | 1.2–2.2 MB (PNG) | <100 KB each (WebP) | — |
 | LCP hero | Unknown | Maintained | — |
 | Sitemap | Exists | Preserved | — |
@@ -72,6 +74,10 @@ Overall: 0/5 phases complete
 | SEO-04 in Phase 3 | LCP is a hero property; fixing it belongs where the hero is built, not in a trailing SEO phase |
 | SEO-01/02/03 in Phase 5 | JSON-LD, canonicals, and sitemap verified after all pages are complete — a single pass confirms nothing was dropped |
 | Standard granularity | 5 natural delivery boundaries match the requirement categories exactly |
+| Inter WOFF2 at 356 KB (no subsetting) | Variable font covers full Latin + Turkish range; subsetting would break optical-size axis; 356 KB passes <400 KB gate |
+| ttf2woff2 as temp devDependency | Installed for conversion, uninstalled after; convert-inter.mjs kept as reproducible utility |
+| Barlow Condensed from Google CDN v13 | HTTP 200 confirmed 2026-05-23; no 404 fallback needed; self-hosted for performance |
+| --color-accent #c8960c pending | Amber token set but not yet validated against sbLogo.png — Task 3 checkpoint gates this before Phase 2 |
 
 ### Known Risks / Pitfalls to Watch
 
@@ -105,4 +111,4 @@ Overall: 0/5 phases complete
 2. Read `.planning/ROADMAP.md` for phase goals and success criteria
 3. Run `/gsd-plan-phase 1` to begin Phase 1 planning
 
-**Last updated:** 2026-05-23 — Roadmap created
+**Last updated:** 2026-05-23T17:53:00Z — Plan 01-01 tasks 1+2 complete; awaiting Task 3 human-verify checkpoint (dark ground + logo accent validation)

@@ -34,7 +34,7 @@
 
 **Plans**: 2 plansPlans:
 
-- [ ] 01-01-PLAN.md — Dark-ground + fonts slice: :root token block, Inter WOFF2, Barlow Condensed 700/900, body tokens, preload hints
+- [~] 01-01-PLAN.md — Dark-ground + fonts slice: :root token block, Inter WOFF2, Barlow Condensed 700/900, body tokens, preload hints (checkpoint: logo accent validation pending)
 - [ ] 01-02-PLAN.md — WebP images slice: convert 6 service PNGs to WebP, swap ServicesPage imports to public path strings
 
 **UI hint**: yes
@@ -110,7 +110,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Planned | - |
+| 1. Foundation | 0/2 | In progress (01-01 checkpoint) | - |
 | 2. Navbar | 0/? | Not started | - |
 | 3. HomePage | 0/? | Not started | - |
 | 4. ServicesPage | 0/? | Not started | - |
