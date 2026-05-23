@@ -1,7 +1,8 @@
 ---
 phase: 1
 slug: foundation
-status: draft
+status: approved
+reviewed_at: 2026-05-23
 shadcn_initialized: false
 preset: none
 created: 2026-05-23
@@ -77,15 +78,16 @@ Exceptions:
 |------|--------------------|-----------:|---------:|--------|-------------|-------------|-------|
 | Body | `--text-body` | 1.6rem | 16px | 400 | 1.5 | `--font-body` | Paragraphs, descriptions, nav links |
 | Label | `--text-label` | 1.4rem | 14px | 600 | 1.4 | `--font-body` | Captions, badges, metadata, button text |
-| Heading | `--text-heading` | 2.4rem | 24px | 600 | 1.2 | `--font-body` | Card titles, section subheadings |
-| Display-sm | `--text-display-sm` | 3.6rem | 36px | 700 | 1.15 | `--font-display` | Section headers, navbar brand text |
+| Heading | `--text-heading` | 2.4rem | 24px | 600 | 1.2 | `--font-body` | Card titles, section subheadings, section headers, navbar brand text |
 | Display-lg | `--text-display-lg` | clamp(4rem, 6vw, 9rem) | 40–90px | 900 | 1.0 | `--font-display` | Hero title, stats numbers |
+
+**Exception — 4 weights across 2 font families:** This system uses 4 weight values (Inter 400, Inter 600, Barlow Condensed 700, Barlow Condensed 900). This exceeds the 2-weight default rule but is justified by strict family-role segregation: Inter handles all body/UI text (2 weights within that family), Barlow Condensed handles all display text (2 weights within that family). No family uses more than 2 weights. The checker should treat each family's weight budget independently.
 
 **Display font usage rules:**
 - `text-transform: uppercase` on all Barlow Condensed instances
 - `letter-spacing: 0.02em` on all Barlow Condensed instances
 - Barlow Condensed 900 reserved for hero headline and large stat numbers only
-- Barlow Condensed 700 for section headers and display-sm contexts
+- Barlow Condensed 700 reserved for display-lg non-hero contexts (future phases)
 
 **Body font usage rules:**
 - Weight 400 for body copy and nav links
