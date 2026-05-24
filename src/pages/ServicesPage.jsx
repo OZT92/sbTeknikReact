@@ -2,16 +2,16 @@ import SEO from "../components/SEO";
 import { SITE } from "../seo/site";
 import { motion } from "motion/react";
 
-import serviceImg1 from "../img/services/elektrikliElAletleri.png";
-import serviceImg2 from "../img/services/isGuvenligi.png";
-import serviceImg3 from "../img/services/nalburiye.png";
-import serviceImg4 from "../img/services/tesisatMalzemeleri.png";
-import serviceImg5 from "../img/services/yapiKimyasallari.png";
-import serviceImg6 from "../img/services/yapiMalzemeleri.png";
-
 import { EnvelopeIcon } from "@phosphor-icons/react";
 import Card from "../components/Card";
 import Button from "../components/Button";
+
+const serviceImg1 = "/img/services/elektrikli-el-aletleri.webp";
+const serviceImg2 = "/img/services/is-guvenligi.webp";
+const serviceImg3 = "/img/services/nalburiye.webp";
+const serviceImg4 = "/img/services/tesisat-malzemeleri.webp";
+const serviceImg5 = "/img/services/yapi-kimyasallari.webp";
+const serviceImg6 = "/img/services/yapi-malzemeleri.webp";
 
 const canonical = `${SITE.baseUrl}/services`;
 
