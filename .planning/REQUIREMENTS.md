@@ -7,10 +7,10 @@
 
 ### Foundation (Performance & Design System)
 
-- [ ] **FOUN-01**: Inter variable font is served as WOFF2 (converted from 854 KB TTF) with correct `@font-face` declaration and `font-display: swap`
-- [ ] **FOUN-02**: All 6 service card images are converted from PNG to WebP format and referenced correctly in `ServicesPage.jsx`
-- [ ] **FOUN-03**: A CSS token layer is defined in `src/index.css` as `:root` custom properties covering color palette, spacing scale, and typography (font families, display weights)
-- [ ] **FOUN-04**: Barlow Condensed 700 and 900 weights are self-hosted and configured as the display font via `@font-face` with correct Unicode ranges for Turkish diacritics
+- [x] **FOUN-01**: Inter variable font is served as WOFF2 (converted from 854 KB TTF) with correct `@font-face` declaration and `font-display: swap`
+- [x] **FOUN-02**: All 6 service card images are converted from PNG to WebP format and referenced correctly in `ServicesPage.jsx`
+- [x] **FOUN-03**: A CSS token layer is defined in `src/index.css` as `:root` custom properties covering color palette, spacing scale, and typography (font families, display weights)
+- [x] **FOUN-04**: Barlow Condensed 700 and 900 weights are self-hosted and configured as the display font via `@font-face` with correct Unicode ranges for Turkish diacritics
 
 ### Navbar
 
@@ -88,10 +88,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUN-01 | Phase 1 — Foundation | Pending |
-| FOUN-02 | Phase 1 — Foundation | Pending |
-| FOUN-03 | Phase 1 — Foundation | Pending |
-| FOUN-04 | Phase 1 — Foundation | Pending |
+| FOUN-01 | Phase 1 — Foundation | Complete |
+| FOUN-02 | Phase 1 — Foundation | Complete |
+| FOUN-03 | Phase 1 — Foundation | Complete |
+| FOUN-04 | Phase 1 — Foundation | Complete |
 | NAV-01 | Phase 2 — Navbar | Pending |
 | NAV-02 | Phase 2 — Navbar | Pending |
 | NAV-03 | Phase 2 — Navbar | Pending |

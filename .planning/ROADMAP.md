@@ -110,7 +110,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/2 | Complete | 2026-05-24 |
+| 1. Foundation | 2/2 | Complete    | 2026-05-24 |
 | 2. Navbar | 0/? | Not started | - |
 | 3. HomePage | 0/? | Not started | - |
 | 4. ServicesPage | 0/? | Not started | - |
