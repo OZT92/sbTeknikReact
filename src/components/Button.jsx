@@ -13,7 +13,7 @@ const Button = ({ text, to, Icon, delay }) => {
     >
       <Link className="hero-cta-btn" to={to}>
         {text}
-        {Icon && <Icon size={22} />}
+        {Icon && <Icon size="1.2em" weight="bold" />}
       </Link>
     </motion.div>
   );

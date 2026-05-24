@@ -114,13 +114,15 @@ export default function AboutPage() {
         aria-label="Sertifikalar"
       >
         {certificates.map((c) => (
-          <img
-            key={c.alt}
-            src={c.src}
-            alt={c.alt}
-            loading="lazy"
-            decoding="async"
-          />
+          <div key={c.alt} className="certificate-card">
+            <img
+              src={c.src}
+              alt={c.alt}
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="certificate-name">{c.alt}</span>
+          </div>
         ))}
       </motion.div>
     </>

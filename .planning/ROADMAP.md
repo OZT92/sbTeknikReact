@@ -10,10 +10,10 @@
 ## Phases
 
 - [x] **Phase 1: Foundation** - CSS token layer, WOFF2 fonts, WebP images — performance and design system base (completed 2026-05-24)
-- [ ] **Phase 2: Navbar** - Bold/industrial navbar redesign using the new token layer, all breakpoints
-- [ ] **Phase 3: HomePage** - Hero redesign, stats row, BrandSlider prominence, CTA buttons — primary conversion surface
-- [ ] **Phase 4: ServicesPage** - Bold card grid, WebP images in place, restyled CTA section
-- [ ] **Phase 5: About + Contact + SEO** - Certificate badges, company story, contact layout, full SEO/sitemap verification
+- [x] **Phase 2: Navbar** - Bold/industrial navbar redesign using the new token layer, all breakpoints
+- [x] **Phase 3: HomePage** - Hero redesign, stats row, BrandSlider prominence, CTA buttons — primary conversion surface
+- [x] **Phase 4: ServicesPage** - Bold card grid, WebP images in place, restyled CTA section
+- [x] **Phase 5: About + Contact + SEO** - Certificate badges, company story, contact layout, full SEO/sitemap verification
 
 ---
 
@@ -51,7 +51,7 @@
   2. Resizing the browser from mobile (320px) through tablet to desktop shows the navbar adapt at every existing breakpoint without layout breakage
   3. Hovering or focusing a nav link shows the updated hover/active state (new accent color) — not the old corporate blue highlight
 
-**Plans**: TBD
+**Plans**: 1 plan (implementation_plan.md)
 **UI hint**: yes
 
 ### Phase 3: HomePage
@@ -68,7 +68,7 @@
   4. The BrandSlider is visually prominent — partner logos are legible against the new background and the slider is visible without scrolling past the hero on desktop
   5. A "10+ Yil" or years-in-business figure is visible on the homepage as a large typographic element (not buried in body text); LCP hero image has `fetchpriority="high"` and `loading="eager"` confirmed in rendered HTML
 
-**Plans**: TBD
+**Plans**: 1 plan (implementation_plan.md)
 **UI hint**: yes
 
 ### Phase 4: ServicesPage
@@ -84,7 +84,7 @@
   3. The card grid is responsive: 1 column on mobile, 2 columns on tablet, 3 columns on desktop — no overflow or broken layout at any viewport
   4. The Services CTA section at the bottom of the page matches the new design token system (not the old unstyled or legacy CTA)
 
-**Plans**: TBD
+**Plans**: 1 plan (implementation_plan.md)
 **UI hint**: yes
 
 ### Phase 5: About + Contact + SEO
@@ -101,7 +101,7 @@
   4. A production build (`vite build`) generates `sitemap.xml` — confirmed by checking `dist/sitemap.xml` after build
   5. All 4 pages contain `application/ld+json` script tags in the built HTML (JSON-LD not silently dropped); canonical URLs, meta descriptions, and OG tags present on all pages
 
-**Plans**: TBD
+**Plans**: 1 plan (implementation_plan.md)
 **UI hint**: yes
 
 ---
@@ -111,10 +111,10 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-05-24 |
-| 2. Navbar | 0/? | Not started | - |
-| 3. HomePage | 0/? | Not started | - |
-| 4. ServicesPage | 0/? | Not started | - |
-| 5. About + Contact + SEO | 0/? | Not started | - |
+| 2. Navbar | 1/1 | Complete    | 2026-05-24 |
+| 3. HomePage | 1/1 | Complete    | 2026-05-24 |
+| 4. ServicesPage | 1/1 | Complete    | 2026-05-24 |
+| 5. About + Contact + SEO | 1/1 | Complete    | 2026-05-24 |
 
 ---
 

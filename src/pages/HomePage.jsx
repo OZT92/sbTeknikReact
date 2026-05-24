@@ -106,6 +106,10 @@ const HomePage = () => {
           <h3 className="hero-text-subtitle">
             Endüstriyel ürünlerde doğru seçimi, doğru hizmetle buluşturuyoruz.
           </h3>
+          <div className="hero-stats">
+            <span className="hero-stats-number">10+</span>
+            <span className="hero-stats-text">Yıl Sektör<br/>Tecrübesi</span>
+          </div>
         </motion.div>
       </div>
 
