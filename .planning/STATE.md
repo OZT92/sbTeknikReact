@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: checkpoint
-last_updated: "2026-05-23T17:53:00Z"
+status: in_progress
+last_updated: "2026-05-24T09:01:00Z"
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 2
-  completed_plans: 0
-  percent: 0
+  completed_plans: 1
+  percent: 25
 ---
 
 # Project State: SB Teknik Malzeme — Website Redesign
@@ -30,26 +30,26 @@ progress:
 
 ## Current Position
 
-Phase: 01 (foundation) — CHECKPOINT
-Plan: 1 of 2
+Phase: 01 (foundation) — In progress (plan 2/2 next)
+Plan: 2 of 2
 | Field | Value |
 |-------|-------|
 | Milestone | Visual Redesign (MVP) |
 | Phase | 1 — Foundation |
-| Plan | 01-01 — 2/3 tasks complete, awaiting Task 3 human-verify checkpoint |
-| Status | Tasks 1+2 committed; dark ground + fonts pipeline done; logo accent validation pending |
+| Plan | 01-01 — COMPLETE (all 3 tasks done, checkpoint approved 2026-05-24) |
+| Status | Dark ground + fonts pipeline done, accent #c8960c approved; 01-02 (WebP images) is next |
 
 **Progress:**
 
 ```
-[>         ] Phase 1: Foundation        — In progress (plan 1/2, checkpoint)
+[=>        ] Phase 1: Foundation        — In progress (plan 1/2 complete, plan 2/2 next)
 [          ] Phase 2: Navbar            — Not started
 [          ] Phase 3: HomePage          — Not started
 [          ] Phase 4: ServicesPage      — Not started
 [          ] Phase 5: About+Contact+SEO — Not started
 ```
 
-Overall: 0/5 phases complete
+Overall: 0/5 phases complete (Phase 1 at 50%)
 
 ---
 
@@ -77,7 +77,7 @@ Overall: 0/5 phases complete
 | Inter WOFF2 at 356 KB (no subsetting) | Variable font covers full Latin + Turkish range; subsetting would break optical-size axis; 356 KB passes <400 KB gate |
 | ttf2woff2 as temp devDependency | Installed for conversion, uninstalled after; convert-inter.mjs kept as reproducible utility |
 | Barlow Condensed from Google CDN v13 | HTTP 200 confirmed 2026-05-23; no 404 fallback needed; self-hosted for performance |
-| --color-accent #c8960c pending | Amber token set but not yet validated against sbLogo.png — Task 3 checkpoint gates this before Phase 2 |
+| --color-accent #c8960c confirmed | Human visual check against sbLogo.png approved amber at Task 3 checkpoint (2026-05-24) — Phase 2 unblocked |
 
 ### Known Risks / Pitfalls to Watch
 
@@ -90,7 +90,7 @@ Overall: 0/5 phases complete
 
 ### Open Questions
 
-- [ ] Logo color confirmed for token system? (Block on Phase 1 completion)
+- [x] Logo color confirmed for token system? — #c8960c approved 2026-05-24
 - [ ] `SITE.phone` verified as WhatsApp-registered number? (WhatsApp CTA is v2 — note for future)
 - [ ] Hero copy validated against Turkish industrial competitors? (Soft — do during Phase 3 planning)
 - [ ] Real customer/project count data for stats row? (Required before Phase 3 ships)
@@ -111,4 +111,4 @@ Overall: 0/5 phases complete
 2. Read `.planning/ROADMAP.md` for phase goals and success criteria
 3. Run `/gsd-plan-phase 1` to begin Phase 1 planning
 
-**Last updated:** 2026-05-23T17:53:00Z — Plan 01-01 tasks 1+2 complete; awaiting Task 3 human-verify checkpoint (dark ground + logo accent validation)
+**Last updated:** 2026-05-24T09:01:00Z — Plan 01-01 COMPLETE (all 3 tasks done, checkpoint approved); next: Plan 01-02 WebP images
