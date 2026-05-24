@@ -10,6 +10,26 @@ import BrandSlider from "../components/BrandSlider";
 
 const canonical = `${SITE.baseUrl}/`;
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+  },
+};
+
 const logoAlts = [
   "oznurkablo",
   "bosch",
@@ -96,27 +116,28 @@ const HomePage = () => {
           </video>
         )}
         <motion.div
-          initial={{ y: -200 }}
-          animate={{ y: 0, transition: { duration: 0.7 } }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
           className="hero-text"
         >
-          <h1 className="hero-text-title">
+          <motion.h1 variants={itemVariants} className="hero-text-title">
             Sanayinin Gücünü Destekleyen Teknik Tedarik
-          </h1>
-          <h3 className="hero-text-subtitle">
+          </motion.h1>
+          <motion.h3 variants={itemVariants} className="hero-text-subtitle">
             Endüstriyel ürünlerde doğru seçimi, doğru hizmetle buluşturuyoruz.
-          </h3>
-          <div className="hero-stats">
+          </motion.h3>
+          <motion.div variants={itemVariants} className="hero-stats">
             <span className="hero-stats-number">10+</span>
             <span className="hero-stats-text">Yıl Sektör<br/>Tecrübesi</span>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
       <div className="page-links">
-        <Button to="/about" text="Hakkımızda" Icon={InfoIcon} />
-        <Button to="/services" text="Hizmetler" Icon={PackageIcon} />
-        <Button to="/contact" text="İletişim" Icon={MapPinLineIcon} />
+        <Button to="/about" text="Hakkımızda" Icon={InfoIcon} delay={0.6} />
+        <Button to="/services" text="Hizmetler" Icon={PackageIcon} delay={0.7} />
+        <Button to="/contact" text="İletişim" Icon={MapPinLineIcon} delay={0.8} />
       </div>
       <BrandSlider logos={logos} speed={40} gap={56} height={150} />
     </>

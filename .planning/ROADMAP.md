@@ -14,6 +14,7 @@
 - [x] **Phase 3: HomePage** - Hero redesign, stats row, BrandSlider prominence, CTA buttons — primary conversion surface
 - [x] **Phase 4: ServicesPage** - Bold card grid, WebP images in place, restyled CTA section
 - [x] **Phase 5: About + Contact + SEO** - Certificate badges, company story, contact layout, full SEO/sitemap verification
+- [x] **Phase 6: Frontend Aesthetic Polish** - IBM Plex Sans font, global grain overlay, staggered framer-motion animations, brutalist hover states
 
 ---
 
@@ -115,6 +116,7 @@
 | 3. HomePage | 1/1 | Complete    | 2026-05-24 |
 | 4. ServicesPage | 1/1 | Complete    | 2026-05-24 |
 | 5. About + Contact + SEO | 1/1 | Complete    | 2026-05-24 |
+| 6. Aesthetic Polish | 1/1 | Complete    | 2026-05-24 |
 
 ---
 
