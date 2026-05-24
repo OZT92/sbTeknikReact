@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-last_updated: "2026-05-24T09:01:00Z"
+last_updated: "2026-05-24T09:07:00Z"
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
-  percent: 25
+  completed_plans: 2
+  percent: 20
 ---
 
 # Project State: SB Teknik Malzeme — Website Redesign
@@ -30,26 +30,26 @@ progress:
 
 ## Current Position
 
-Phase: 01 (foundation) — In progress (plan 2/2 next)
-Plan: 2 of 2
+Phase: 01 (foundation) — COMPLETE
+Plan: 2/2 done — Phase 2 (Navbar) is next
 | Field | Value |
 |-------|-------|
 | Milestone | Visual Redesign (MVP) |
-| Phase | 1 — Foundation |
-| Plan | 01-01 — COMPLETE (all 3 tasks done, checkpoint approved 2026-05-24) |
-| Status | Dark ground + fonts pipeline done, accent #c8960c approved; 01-02 (WebP images) is next |
+| Phase | 1 — Foundation — COMPLETE (2026-05-24) |
+| Plan | 01-02 — COMPLETE (2 tasks done: WebP conversion + ServicesPage import swap) |
+| Status | Foundation pipeline done: token layer, WOFF2 fonts, WebP images. Phase 2 (Navbar) unblocked |
 
 **Progress:**
 
 ```
-[=>        ] Phase 1: Foundation        — In progress (plan 1/2 complete, plan 2/2 next)
+[==        ] Phase 1: Foundation        — COMPLETE (2/2 plans done)
 [          ] Phase 2: Navbar            — Not started
 [          ] Phase 3: HomePage          — Not started
 [          ] Phase 4: ServicesPage      — Not started
 [          ] Phase 5: About+Contact+SEO — Not started
 ```
 
-Overall: 0/5 phases complete (Phase 1 at 50%)
+Overall: 1/5 phases complete
 
 ---
 
@@ -58,7 +58,7 @@ Overall: 0/5 phases complete (Phase 1 at 50%)
 | Metric | Baseline | Target | Current |
 |--------|----------|--------|---------|
 | Inter font size | 854 KB (TTF) | ~200 KB (WOFF2) | 356 KB WOFF2 (plan 01-01) |
-| Service image size | 1.2–2.2 MB (PNG) | <100 KB each (WebP) | — |
+| Service image size | 1.2–2.2 MB (PNG) | <100 KB each (WebP) | 46–182 KB WebP (plan 01-02) |
 | LCP hero | Unknown | Maintained | — |
 | Sitemap | Exists | Preserved | — |
 
@@ -78,6 +78,8 @@ Overall: 0/5 phases complete (Phase 1 at 50%)
 | ttf2woff2 as temp devDependency | Installed for conversion, uninstalled after; convert-inter.mjs kept as reproducible utility |
 | Barlow Condensed from Google CDN v13 | HTTP 200 confirmed 2026-05-23; no 404 fallback needed; self-hosted for performance |
 | --color-accent #c8960c confirmed | Human visual check against sbLogo.png approved amber at Task 3 checkpoint (2026-05-24) — Phase 2 unblocked |
+| WebP public-path convention established | const serviceImgN = "/img/services/kebab-name.webp" after last import — pattern for all future image additions |
+| sharp as temp devDependency | Installed for one-off conversion, uninstalled after — not in production package.json |
 
 ### Known Risks / Pitfalls to Watch
 
@@ -111,4 +113,4 @@ Overall: 0/5 phases complete (Phase 1 at 50%)
 2. Read `.planning/ROADMAP.md` for phase goals and success criteria
 3. Run `/gsd-plan-phase 1` to begin Phase 1 planning
 
-**Last updated:** 2026-05-24T09:01:00Z — Plan 01-01 COMPLETE (all 3 tasks done, checkpoint approved); next: Plan 01-02 WebP images
+**Last updated:** 2026-05-24T09:07:00Z — Plan 01-02 COMPLETE (2 tasks done: 6 WebP files created, ServicesPage imports swapped); Phase 1 Foundation COMPLETE; next: Phase 2 Navbar

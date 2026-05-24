@@ -9,7 +9,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - CSS token layer, WOFF2 fonts, WebP images — performance and design system base
+- [x] **Phase 1: Foundation** - CSS token layer, WOFF2 fonts, WebP images — performance and design system base (completed 2026-05-24)
 - [ ] **Phase 2: Navbar** - Bold/industrial navbar redesign using the new token layer, all breakpoints
 - [ ] **Phase 3: HomePage** - Hero redesign, stats row, BrandSlider prominence, CTA buttons — primary conversion surface
 - [ ] **Phase 4: ServicesPage** - Bold card grid, WebP images in place, restyled CTA section
@@ -35,7 +35,7 @@
 **Plans**: 2 plansPlans:
 
 - [x] 01-01-PLAN.md — Dark-ground + fonts slice: :root token block, Inter WOFF2, Barlow Condensed 700/900, body tokens, preload hints (accent #c8960c approved 2026-05-24)
-- [ ] 01-02-PLAN.md — WebP images slice: convert 6 service PNGs to WebP, swap ServicesPage imports to public path strings
+- [x] 01-02-PLAN.md — WebP images slice: convert 6 service PNGs to WebP, swap ServicesPage imports to public path strings (completed 2026-05-24)
 
 **UI hint**: yes
 
@@ -110,7 +110,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/2 | In progress (01-02 next) | - |
+| 1. Foundation | 2/2 | Complete | 2026-05-24 |
 | 2. Navbar | 0/? | Not started | - |
 | 3. HomePage | 0/? | Not started | - |
 | 4. ServicesPage | 0/? | Not started | - |
