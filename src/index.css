@@ -435,7 +435,9 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  min-height: 60vh;
+  height: auto;
+  padding: var(--space-3xl) 0;
   margin-bottom: var(--space-xl);
   overflow: hidden;
   background-color: var(--color-bg);
@@ -512,13 +514,13 @@ body::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   background-color: var(--color-white);
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
   border-radius: 8px;
   border: 1px solid var(--color-border);
   transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
-  width: 160px;
+  width: 140px;
 }
 
 .certificate-card:hover {
@@ -527,14 +529,14 @@ body::after {
 }
 
 .certificate-card img {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   object-fit: contain;
 }
 
 .certificate-name {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-bg);
   text-transform: uppercase;
@@ -848,7 +850,7 @@ body::after {
 
   /* About & Contact Desktop */
   .about-section {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .map-container {
@@ -933,7 +935,7 @@ body::after {
   }
 
   .about-section {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .contact-section {
@@ -978,7 +980,7 @@ body::after {
 /* >= 1400 (wide) */
 @media (min-width: 1400px) {
   .about-section {
-    height: 75vh;
+    min-height: 75vh;
   }
 
   .certificates-section img {
