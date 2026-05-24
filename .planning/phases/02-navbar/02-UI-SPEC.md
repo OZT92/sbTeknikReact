@@ -50,17 +50,19 @@ Exceptions:
 
 ## Typography
 
-Source: Phase 1 tokens. `1rem = 10px` throughout.
+Source: Phase 1 tokens. `1rem = 10px` throughout. Executor must add `--text-subheading: 2.0rem` to the `:root` block in `src/index.css` — it does not yet exist.
 
 | Role | CSS Variable | Size | Font | Weight | Letter-Spacing | Line Height |
 |------|-------------|------|------|--------|---------------|-------------|
-| Nav link (desktop) | `--text-heading` | 2.0rem (20px) | `--font-display` (Barlow Condensed) | 700 | 0.08em | 1 (single line) |
+| Nav link (desktop) | `--text-subheading` | 2.0rem (20px) | `--font-display` (Barlow Condensed) | 700 | 0.08em | 1 (single line) |
 | Nav link (tablet ≥640px) | `--text-body` | 1.6rem (16px) | `--font-display` (Barlow Condensed) | 700 | 0.08em | 1 |
 | Nav link (mobile <640px) | `--text-label` | 1.4rem (14px) | `--font-display` (Barlow Condensed) | 700 | 0.06em | 1 |
 | Logo wordmark (desktop ≥1024px) | `--text-heading` | 2.4rem (24px) | `--font-display` (Barlow Condensed) | 900 | 0.04em | 1 |
-| Logo wordmark (tablet ≥640px) | — | 1.8rem (18px) | `--font-display` (Barlow Condensed) | 900 | 0.04em | 1 |
-| Logo wordmark (mobile) | — | 1.4rem (14px) | `--font-display` (Barlow Condensed) | 900 | 0.04em | 1 |
+| Logo wordmark (tablet ≥640px) | `--text-body` | 1.6rem (16px) | `--font-display` (Barlow Condensed) | 900 | 0.04em | 1 |
+| Logo wordmark (mobile) | `--text-label` | 1.4rem (14px) | `--font-display` (Barlow Condensed) | 900 | 0.04em | 1 |
 | Mobile menu link | `--text-heading` | 2.4rem (24px) | `--font-display` (Barlow Condensed) | 700 | 0.1em | 1 |
+
+Typography scale is exactly 4 sizes: **14px, 16px, 20px, 24px**.
 
 Typography weights are exactly 2: **700 (Bold)** for nav links and **900 (Black)** for logo wordmark only.
 
@@ -266,16 +268,17 @@ Note: Existing navbar uses "Hizmetlerimiz" for /services — this matches the ro
 
 ## Implementation Notes for Executor
 
-1. **Replace** `.navbar` background from `#fefcfb81` to `var(--color-bg)` with `backdrop-filter: blur(8px)`.
-2. **Replace** all `#194d88` references in navbar CSS rules with token variables.
-3. **Replace** `<div className="navbar">` with `<nav className="navbar" aria-label="Ana navigasyon">` for semantic HTML.
-4. **Replace** plain `<Link>` with React Router `<NavLink>` to get `isActive` for active state styling.
-5. **Add** `position: sticky; top: 0; z-index: var(--z-navbar)` to `.navbar`.
-6. **Add** hamburger `<button>` with state management (`useState(false)`) for mobile drawer.
-7. **Add** `AnimatePresence` + `motion.div` for drawer reveal animation.
-8. **Add** `useReducedMotion()` guard on drawer animation.
-9. **Delete** `.nav-logo-text` `color: #194d88` and `.navbar-links_link` `color: #194d88` — these are the primary old-blue artifacts.
-10. **Preserve** all existing breakpoint media queries for navbar — only update property values, not breakpoint thresholds.
+1. **Add** `--text-subheading: 2.0rem` to the `:root` block in `src/index.css` (new token — does not yet exist).
+2. **Replace** `.navbar` background from `#fefcfb81` to `var(--color-bg)` with `backdrop-filter: blur(8px)`.
+3. **Replace** all `#194d88` references in navbar CSS rules with token variables.
+4. **Replace** `<div className="navbar">` with `<nav className="navbar" aria-label="Ana navigasyon">` for semantic HTML.
+5. **Replace** plain `<Link>` with React Router `<NavLink>` to get `isActive` for active state styling.
+6. **Add** `position: sticky; top: 0; z-index: var(--z-navbar)` to `.navbar`.
+7. **Add** hamburger `<button>` with state management (`useState(false)`) for mobile drawer.
+8. **Add** `AnimatePresence` + `motion.div` for drawer reveal animation.
+9. **Add** `useReducedMotion()` guard on drawer animation.
+10. **Delete** `.nav-logo-text` `color: #194d88` and `.navbar-links_link` `color: #194d88` — these are the primary old-blue artifacts.
+11. **Preserve** all existing breakpoint media queries for navbar — only update property values, not breakpoint thresholds.
 
 ---
 
